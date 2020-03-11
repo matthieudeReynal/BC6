@@ -4,8 +4,8 @@ import "./Ownable.sol";
 import "./ERC721.sol";
 import "./safemath.sol";
 
-
-contract DeclareAnimal is Ownable{
+// This contract contains functions about whitelist, creating an animal, make it dead, bread and auctions
+contract DeclareAnimal is Ownable{ 
     
     using SafeMath for uint256;
     address[] public whitelist;
@@ -14,7 +14,7 @@ contract DeclareAnimal is Ownable{
   constructor() public{}
 
     function registerBreeder(address _adress) private{
-        require(keccak256(abi.encode(msg.sender)) == keccak256(abi.encode(myAdress)));
+        require(keccak256(abi.encode(msg.sender)) == keccak256(abi.encode(myAdress))); // only me can add someone to the whitelist
         whitelist.push(_adress);
     }
     
