@@ -1,5 +1,1 @@
-# BC6
-
-TD6 de Blockchain Programming
-
-Matthieu de Reynal
+ERC 721 Token using Solidiy and Truffle
